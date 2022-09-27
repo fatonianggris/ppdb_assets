@@ -14,6 +14,7 @@
 		var demo = function () {
 
 			var datatable = $('#kt_datatable_schedule').KTDatatable({
+				sortable: false,
 				data: {
 					saveState: { cookie: false },
 					pageSize: 5

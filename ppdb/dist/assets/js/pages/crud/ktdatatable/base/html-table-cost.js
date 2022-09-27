@@ -14,6 +14,7 @@
 		var demo = function () {
 
 			var datatable = $('#kt_datatable_cost').KTDatatable({
+				sortable: false,
 				data: {
 					saveState: { cookie: false },
 					pageSize: 5

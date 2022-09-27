@@ -11,6 +11,7 @@
 		// Private functions
 
 		var options = {
+			sortable: false,
 			data: {
 				pageSize: 500,
 			},

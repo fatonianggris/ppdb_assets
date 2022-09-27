@@ -13,9 +13,9 @@
 		// demo initializer
 		var demo = function () {
 
-			var datatable = $('#kt_datatable_sold').KTDatatable({
+			var datatable = $('#kt_datatable_sold').KTDatatable({			
+				sortable: false,
 				data: {
-					saveState: { cookie: false },
 					pageSize: 5
 				},
 				search: {
@@ -30,7 +30,7 @@
 					title: 'No Daftar',
 					width: 80,
 					type: 'number',
-					autoHide: false
+					autoHide: false,
 				},
 				{
 					field: 'Nama Calon',

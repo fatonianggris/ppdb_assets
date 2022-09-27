@@ -14,6 +14,7 @@
 		var demo = function () {
 
 			var datatable = $('#kt_datatable_confirm_payment_ppdb').KTDatatable({
+				sortable: false,
 				data: {
 					saveState: { cookie: false },
 					pageSize: 5

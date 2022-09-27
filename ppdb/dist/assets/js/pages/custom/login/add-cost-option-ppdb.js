@@ -1,17 +1,14 @@
 /******/ (() => { // webpackBootstrap
-    /******/ 	"use strict";
 	var __webpack_exports__ = {};
-
-	// Class Definition
-	var KTLogin = function () {
-		var _login;
-
-		var _handleSignInForm = function () {
-			var validation;
-			var form = KTUtil.getById('kt_form_cost_option');
-			// Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
-			validation = FormValidation.formValidation(
-				form,
+	/*!********************************************************************!*\
+	 !*** ../demo1/src/js/pages/crud/forms/validation/form-controls.js ***!
+	 \********************************************************************/
+	// Class definition
+	var KTFormControls = function () {
+		// Private functions
+		var _initCost = function () {
+			FormValidation.formValidation(
+				document.getElementById('kt_form_cost_option'),
 				{
 					fields: {
 						id_kategori_biaya: {
@@ -28,62 +25,33 @@
 								}
 							}
 						},
-
 					},
-					plugins: {
+
+					plugins: {//Learn more: https://formvalidation.io/guide/plugins
 						trigger: new FormValidation.plugins.Trigger(),
+						// Bootstrap Framework Integration
+						bootstrap: new FormValidation.plugins.Bootstrap(),
+						// Validate fields when clicking the Submit button
 						submitButton: new FormValidation.plugins.SubmitButton(),
-						bootstrap: new FormValidation.plugins.Bootstrap()
+						// Submit the form when all fields are valid
+						defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
 					}
 				}
 			);
-			_login.on('submit', function (wizard) {
-				if (validation) {
-					validation.validate().then(function (status) {
-						if (status == 'Valid') {
-							KTApp.blockPage({
-								overlayColor: '#FFA800',
-								state: 'warning',
-								size: 'lg',
-								opacity: 0.1,
-								message: 'Silahkan Tunggu...'
-							});
-							form.submit(); // Submit form
-						} else {
-							Swal.fire({
-								text: "Mohon Maaf, kemungkinan terjadi kesalahan pada pengisian Anda, Mohon menginputkan dengan benar.",
-								icon: "error",
-								buttonsStyling: false,
-								confirmButtonText: "Oke!",
-								customClass: {
-									confirmButton: "btn font-weight-bold btn-primary"
-								}
-							}).then(function () {
-								KTUtil.scrollTop();
-							});
-						}
-					});
-				}
-			});
 		};
 
-		// Public Functions
 		return {
 			// public functions
 			init: function () {
-				_login = $('#kt_form_modal');
-
-				_handleSignInForm();
+				_initCost();
 			}
 		};
 	}();
 
-	// Class Initialization
 	jQuery(document).ready(function () {
-		KTLogin.init();
+		KTFormControls.init();
 	});
 
 	/******/
-})()
-	;
-//# sourceMappingURL=login-general.js.map
+})();
+//# sourceMappingURL=form-controls.js.map
