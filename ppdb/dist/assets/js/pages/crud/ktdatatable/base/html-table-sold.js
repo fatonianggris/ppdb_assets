@@ -13,7 +13,7 @@
 		// demo initializer
 		var demo = function () {
 
-			var datatable = $('#kt_datatable_sold').KTDatatable({			
+			var datatable = $('#kt_datatable_sold').KTDatatable({
 				sortable: false,
 				data: {
 					pageSize: 5
@@ -151,6 +151,8 @@
 
 			var th = $('#kt_datatable_search_schoolyear').find("option:selected");
 			datatable.search(th.val().toLowerCase(), 'TA');
+
+			datatable.sort('No Daftar', 'desc');
 
 			$('#kt_datatable_search_grade').on('change', function () {
 				datatable.search($(this).val().toLowerCase(), 'Jenjang');
