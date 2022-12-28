@@ -152,7 +152,7 @@
 
 			var th = $('#kt_datatable_search_schoolyear').find("option:selected");
 			datatable.search(th.val().toLowerCase(), 'TA');
-			datatable.sort('No Formulir', 'desc');
+			datatable.sort('Tanggal', 'desc');
 
 			$('#kt_datatable_search_grade').on('change', function () {
 				datatable.search($(this).val().toLowerCase(), 'Jenjang');

@@ -68093,9 +68093,7 @@ code {
 .label.label-inline.label-md {
   padding: 0.8rem 0.6rem;
 }
-.label.label-inline.label-lg {
-  padding: 0.9rem 0.75rem;
-}
+
 .label.label-inline.label-xl {
   padding: 1rem 0.85rem;
 }
@@ -68140,7 +68138,7 @@ code {
   width: 4px;
 }
 .label.label-lg {
-  height: 24px;
+  height: auto;
   width: 24px;
   font-size: 0.9rem;
 }
