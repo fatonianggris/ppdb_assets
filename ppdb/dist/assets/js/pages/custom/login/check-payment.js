@@ -14,10 +14,10 @@
 				form,
 				{
 					fields: {
-						nomor_pendaftaran: {
+						nomor_formulir: {
 							validators: {
 								notEmpty: {
-									message: 'Nomor Pendaftaran diperlukan'
+									message: 'Nomor Formulir diperlukan'
 								},
 								integer: {
 									message: 'Inputan harus Angka',

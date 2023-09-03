@@ -14,10 +14,10 @@
 				form,
 				{
 					fields: {
-						username: {
+						nomor_formulir: {
 							validators: {
 								notEmpty: {
-									message: 'Username diperlukan'
+									message: 'Nomor Formulir diperlukan'
 								}
 							}
 						},

@@ -26,8 +26,8 @@
 					class: 'datatable-bordered datatable-head-custom',
 				},
 				columns: [{
-					field: 'No Daftar',
-					title: 'No Daftar',
+					field: 'No Formulir',
+					title: 'No Formulir',
 					width: 80,
 					type: 'number',
 					autoHide: false,

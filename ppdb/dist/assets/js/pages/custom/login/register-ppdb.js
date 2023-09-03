@@ -53,20 +53,6 @@
 								}
 							}
 						},
-						nama_orangtua: {
-							validators: {
-								notEmpty: {
-									message: 'Nama Orangtua/Wali Siswa diperlukan'
-								}
-							}
-						},
-						alamat: {
-							validators: {
-								notEmpty: {
-									message: 'Alamat Siswa diperlukan'
-								}
-							}
-						},
 						email_orangtua: {
 							validators: {
 								notEmpty: {

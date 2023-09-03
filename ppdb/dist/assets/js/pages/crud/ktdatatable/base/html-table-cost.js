@@ -34,7 +34,7 @@
 					template: function (row) {
 						var status = {
 							1: {
-								'title': 'PENDAFTARAN',
+								'title': 'FORMULIR',
 								'class': 'label-light-primary'
 							},
 							2: {
