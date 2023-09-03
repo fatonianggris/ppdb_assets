@@ -61,11 +61,11 @@
 								emailAddress: {
 									message: 'Inputan harus berformat Email'
 								},
-								remote: {
-									message: 'Email telah digunakan, Gunakan Email lain',
-									method: 'POST',
-									url: base_url + 'ppdb/register/check_email_ppdb',
-								},
+								// remote: {
+								// 	message: 'Email telah digunakan, Gunakan Email lain',
+								// 	method: 'POST',
+								// 	url: base_url + 'ppdb/register/check_email_ppdb',
+								// },
 							}
 						},
 						nomor_wa: {
