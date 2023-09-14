@@ -34,6 +34,16 @@
 				if (validator) {
 					validator.validate().then(function (status) {
 						if (status == 'Valid') {
+							if (wizard.getStep() == 1) {
+								post_personal_contact_student();
+							} else if (wizard.getStep() == 2) {
+								post_parents_student();
+							} else if (wizard.getStep() == 3) {
+								post_address_student();
+							} else if (wizard.getStep() == 4) {
+								post_periodic_student();
+							}
+
 							wizard.goTo(wizard.getNewStep());
 							KTUtil.scrollTop();
 						} else {
@@ -69,7 +79,7 @@
 					validator.validate().then(function (status) {
 						if (status == 'Valid') {
 							Swal.fire({
-								text: "Oke! semua inputan telah tervalidasi, Silahkan pilih tombol Kirim untuk menyimpan.",
+								text: "Oke! semua inputan telah tervalidasi, Silahkan pilih tombol Kirim untuk Mengkonfirmasi.",
 								icon: "success",
 								showCancelButton: true,
 								buttonsStyling: false,
@@ -91,7 +101,7 @@
 									_formEl.submit(); // Submit form
 								} else if (result.dismiss === 'cancel') {
 									Swal.fire({
-										text: "Input tambah siswa Anda batalkan!.",
+										text: "Konfirmasi Registrasi Anda batalkan!.",
 										icon: "error",
 										buttonsStyling: false,
 										confirmButtonText: "Oke!",

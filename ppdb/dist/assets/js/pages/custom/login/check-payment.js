@@ -14,6 +14,13 @@
 				form,
 				{
 					fields: {
+						opsi_pembayaran: {
+							validators: {
+								notEmpty: {
+									message: 'Opsi Pembayaran diperlukan'
+								},
+							}
+						},
 						nomor_formulir: {
 							validators: {
 								notEmpty: {
