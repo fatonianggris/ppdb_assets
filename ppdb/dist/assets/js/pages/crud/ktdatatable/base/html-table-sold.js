@@ -15,6 +15,7 @@
 
 			var datatable = $('#kt_datatable_sold').KTDatatable({
 				sortable: false,
+				checkbox: true,
 				data: {
 					pageSize: 5
 				},
@@ -25,128 +26,160 @@
 				layout: {
 					class: 'datatable-bordered datatable-head-custom',
 				},
-				columns: [{
-					field: 'No Formulir',
-					title: 'No Formulir',
-					width: 80,
-					type: 'number',
-					autoHide: false,
-				},
-				{
-					field: 'Nama Calon',
-					title: 'Nama Calon',
-					width: 200,
-					autoHide: false
-				},
-				{
-					field: 'JK',
-					title: 'JK',
-					width: 40,
-					template: function (row) {
-						var status = {
-							1: {
-								'title': 'L',
-								'class': 'label-light-warning'
-							},
-							2: {
-								'title': 'P',
-								'class': 'label-light-success'
-							}
-						};
-						return '<span class="label font-weight-bold label-lg ' + status[row.JK].class + ' label-inline">' + status[row.JK].title + '</span>';
+				columns: [
+					{
+						field: 'ID',
+						title: 'ID',
+						sortable: false,
+						width: 20,
+						selector: true,
+						textAlign: 'center',
+					}, {
+						field: 'No Formulir',
+						title: 'No Formulir',
+						width: 80,
+						type: 'number',
+						autoHide: false,
 					},
-				},
-				{
-					field: 'Jenjang',
-					title: 'Jenjang',
-					width: 70,
-					template: function (row) {
-						var status = {
-							1: {
-								'title': 'KB',
-								'class': 'label-light-info'
-							},
-							2: {
-								'title': 'TK',
-								'class': 'label-light-primary'
-							},
-							3: {
-								'title': 'SD',
-								'class': 'label-light-success'
-							},
-							4: {
-								'title': 'SMP',
-								'class': 'label-light-warning'
-							},
-							5: {
-								'title': 'KB-TK',
-								'class': 'label-light-danger'
-							},
-							6: {
-								'title': 'DC',
-								'class': 'label-light-default'
-							}
-						};
-						return '<span class="label font-weight-bold label-lg ' + status[row.Jenjang].class + ' label-inline">' + status[row.Jenjang].title + '</span>';
+					{
+						field: 'Nama Calon',
+						title: 'Nama Calon',
+						width: 200,
+						autoHide: false
 					},
-				},
-				{
-					field: 'Program',
-					title: 'Program',
-					width: 90,
-					template: function (row) {
-						var status = {
-							1: {
-								'title': 'REGULER',
-								'class': 'label-light-info'
-							},
-							2: {
-								'title': 'ICP',
-								'class': 'label-light-success'
-							}
-						};
-						return '<span class="label font-weight-bold label-lg ' + status[row.Program].class + ' label-inline">' + status[row.Program].title + '</span>';
+					{
+						field: 'JK',
+						title: 'JK',
+						width: 40,
+						template: function (row) {
+							var status = {
+								1: {
+									'title': 'L',
+									'class': 'label-light-warning'
+								},
+								2: {
+									'title': 'P',
+									'class': 'label-light-success'
+								}
+							};
+							return '<span class="label font-weight-bold label-lg ' + status[row.JK].class + ' label-inline">' + status[row.JK].title + '</span>';
+						},
 					},
-				},
-				{
-					field: 'Pembayaran',
-					title: 'Pembayaran',
-					width: 110,
-					template: function (row) {
-						var status = {
-							0: {
-								'title': 'BELUM BAYAR',
-								'class': 'label-light-danger'
-							},
-							1: {
-								'title': 'SUDAH BAYAR',
-								'class': 'label-light-success'
-							}
+					{
+						field: 'Jenjang',
+						title: 'Jenjang',
+						width: 70,
+						template: function (row) {
+							var status = {
+								1: {
+									'title': 'KB',
+									'class': 'label-light-info'
+								},
+								2: {
+									'title': 'TK',
+									'class': 'label-light-primary'
+								},
+								3: {
+									'title': 'SD',
+									'class': 'label-light-success'
+								},
+								4: {
+									'title': 'SMP',
+									'class': 'label-light-warning'
+								},
+								5: {
+									'title': 'KB-TK',
+									'class': 'label-light-danger'
+								},
+								6: {
+									'title': 'DC',
+									'class': 'label-light-default'
+								}
+							};
+							return '<span class="label font-weight-bold label-lg ' + status[row.Jenjang].class + ' label-inline">' + status[row.Jenjang].title + '</span>';
+						},
+					},
+					{
+						field: 'Program',
+						title: 'Program',
+						width: 90,
+						template: function (row) {
+							var status = {
+								1: {
+									'title': 'REGULER',
+									'class': 'label-light-info'
+								},
+								2: {
+									'title': 'ICP',
+									'class': 'label-light-success'
+								}
+							};
+							return '<span class="label font-weight-bold label-lg ' + status[row.Program].class + ' label-inline">' + status[row.Program].title + '</span>';
+						},
+					},
+					{
+						field: 'Pembayaran',
+						title: 'Pembayaran',
+						width: 110,
+						template: function (row) {
+							var status = {
+								0: {
+									'title': 'BELUM BAYAR',
+									'class': 'label-light-danger'
+								},
+								1: {
+									'title': 'SUDAH BAYAR',
+									'class': 'label-light-success'
+								}
 
-						};
-						return '<span class="label font-weight-bold label-lg ' + status[row.Pembayaran].class + ' label-inline">' + status[row.Pembayaran].title + '</span>';
+							};
+							return '<span class="label font-weight-bold label-lg ' + status[row.Pembayaran].class + ' label-inline">' + status[row.Pembayaran].title + '</span>';
+						},
 					},
-				},
-				{
-					field: 'No Whatsapp',
-					title: 'No Whatsapp',
-					width: 120,
-					type: 'number',
-				},
-				{
-					field: 'Masuk',
-					title: 'Masuk',
-					width: 100,
-					template: function (row) {
-						return '<span class="label font-weight-bold label-lg label-light-default label-inline">' + row.Masuk + '</span>';
-					}
-				},
-				{
-					field: 'TA',
-					title: 'TA',
-					width: 90,
-				},
+					{
+						field: 'No Whatsapp',
+						title: 'No Whatsapp',
+						width: 120,
+						type: 'number',
+					},
+					{
+						field: 'Masuk',
+						title: 'Masuk',
+						width: 100,
+						template: function (row) {
+							return '<span class="label font-weight-bold label-lg label-light-default label-inline">' + row.Masuk + '</span>';
+						}
+					},
+					{
+						field: 'TA',
+						title: 'TA',
+						width: 90,
+					},
 				]
+			});
+
+			var count_data = null;
+
+			datatable.on(
+				'datatable-on-check datatable-on-uncheck',
+				function (e) {
+					var checkedNodes = $.makeArray(datatable.getSelectedRecords().find('.checkbox-single > [type="checkbox"]').
+						map(function (i, chk) {
+							return $(chk).val();
+						}));
+					count_data = checkedNodes.join(',');
+				});
+
+			$('#frm-excel').on('submit', function () {
+				document.getElementById('id_check_excel').value = count_data;
+			});
+
+			$('#frm-form').on('submit', function () {
+				document.getElementById('id_check_form').value = count_data;
+			});
+
+			$('#frm-files').on('submit', function () {
+				document.getElementById('id_check_files').value = count_data;
 			});
 
 			var th = $('#kt_datatable_search_schoolyear').find("option:selected");
