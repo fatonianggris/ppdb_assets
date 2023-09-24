@@ -168,20 +168,13 @@
 							return $(chk).val();
 						}));
 					count_data = checkedNodes.join(',');
+					console.log(count_data);
 				});
 
 			$('#frm-excel').on('submit', function () {
 				document.getElementById('id_check_excel').value = count_data;
 			});
-
-			$('#frm-form').on('submit', function () {
-				document.getElementById('id_check_form').value = count_data;
-			});
-
-			$('#frm-files').on('submit', function () {
-				document.getElementById('id_check_files').value = count_data;
-			});
-
+		
 			var th = $('#kt_datatable_search_schoolyear').find("option:selected");
 			datatable.search(th.val().toLowerCase(), 'TA');
 			datatable.sort('Masuk', 'desc');

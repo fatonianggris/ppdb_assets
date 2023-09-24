@@ -24,6 +24,9 @@
             $('#kt_money_input_wali').mask('000.000.000.000.000', {
                 reverse: true
             });
+			$('#nominal_potongan_langsung').mask('000.000.000.000.000', {
+                reverse: true
+            });
         }
 
         return {
