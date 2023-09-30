@@ -143,16 +143,16 @@
 					width: 100,
 					template: function (row) {
 						var status = {
-							lunas: {
+							LUNAS: {
 								'title': 'LUNAS',
 								'class': 'label-light-success'
 							},
-							belum_lunas: {
-								'title': 'BELUM LUNAS',
-								'class': 'label-light-danger'
+							KREDIT: {
+								'title': 'KREDIT',
+								'class': 'label-light-warning'
 							},
 							'': {
-								'title': 'BELUM LUNAS',
+								'title': 'BELUM BAYAR',
 								'class': 'label-light-danger'
 							}
 
