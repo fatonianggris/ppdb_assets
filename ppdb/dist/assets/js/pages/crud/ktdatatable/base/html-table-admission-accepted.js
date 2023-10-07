@@ -152,8 +152,8 @@
 							'class': 'label-light-danger'
 						},
 						1: {
-							'title': 'SUDAH BAYAR',
-							'class': 'label-light-success'
+							'title': 'PROSES BAYAR',
+							'class': 'label-light-warning'
 						},
 						2: {
 							'title': 'SUDAH BAYAR',
@@ -170,16 +170,16 @@
 				width: 100,
 				template: function (row) {
 					var status = {
-						lunas: {
+						LUNAS: {
 							'title': 'LUNAS',
 							'class': 'label-light-success'
 						},
-						belum_lunas: {
-							'title': 'BELUM LUNAS',
-							'class': 'label-light-danger'
+						KREDIT: {
+							'title': 'KREDIT',
+							'class': 'label-light-warning'
 						},
 						'': {
-							'title': 'BELUM LUNAS',
+							'title': 'BELUM BAYAR',
 							'class': 'label-light-danger'
 						}
 
