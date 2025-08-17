@@ -37,6 +37,41 @@
 
 							}
 						},
+
+						maintenance_end_time: {
+							validators: {
+								notEmpty: {
+									message: 'Lama Waktu Maintenance diperlukan'
+								},
+							}
+						},
+
+						max_limit: {
+							validators: {
+								notEmpty: {
+									message: 'Max Limit diperlukan'
+								},
+								integer: {
+									message: 'Inputan harus Angka',
+									// The default separators
+									thousandsSeparator: '',
+									decimalSeparator: ''
+								},
+							}
+						},
+						limit_access_end_time: {
+							validators: {
+								notEmpty: {
+									message: 'Lama Waktu Limit diperlukan'
+								},
+								integer: {
+									message: 'Inputan harus Angka',
+									// The default separators
+									thousandsSeparator: '',
+									decimalSeparator: ''
+								},
+							}
+						},
 						logo_website: {
 							validators: {
 								file: {
